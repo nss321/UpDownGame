@@ -121,6 +121,8 @@
                     </view>
                     <connections>
                         <outlet property="slider" destination="iAv-4s-3g8" id="k7Y-su-GjQ"/>
+                        <outlet property="sliderValueLabel" destination="Qo7-jy-7J1" id="WRY-Xe-Und"/>
+                        <outlet property="tryCountLabel" destination="ORc-Dd-Lcq" id="ekk-91-Ivp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
