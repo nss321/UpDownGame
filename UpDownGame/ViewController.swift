@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var tryCountLabel: UILabel!
     @IBOutlet weak var sliderValueLabel: UILabel!
+    @IBOutlet weak var minimumValueLabel: UILabel!
+    @IBOutlet weak var maximumValueLabel: UILabel!
     
     
     
@@ -41,6 +43,15 @@ class ViewController: UIViewController {
     
     func reset() {
         print("reset!")
+        randomValue = Int.random(in: 0...30)
+        tryCount = 0
+        tryCountLabel.text = "0/5"
+        slider.minimumValue = 0
+        slider.maximumValue = 30
+        slider.value = 15
+        minimumValueLabel.text = "0"
+        maximumValueLabel.text = "30"
+        sliderValueLabel.text = "15"
     }
 }
 
