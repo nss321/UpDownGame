@@ -30,10 +30,31 @@ class ViewController: UIViewController {
     
     @IBAction func sliderValueChanged(_ sender: UISlider){
         print(sender.value)
+        let integerValue: Int = Int(sender.value)
+        sliderValueLabel.text = String(integerValue)
+        
     }
     
     @IBAction func touchUpHitButton(_ sender: UIButton){
         print(slider.value)
+        let hitValue: Int = Int(slider.value)
+        slider.value = Float(hitValue)
+        
+        tryCount = tryCount + 1
+        tryCountLabel.text = "\(tryCount)/5"
+        
+        if randomValue == hitValue{
+            print("Win")
+            return
+        } else if tryCount >= 5 {
+            print("Lose")
+        } else if randomValue > hitValue {
+            slider.minimumValue = Float(hitValue)
+            minimumValueLabel.text = String(hitValue)
+        } else {
+            slider.maximumValue = Float(hitValue)
+            maximumValueLabel.text = String(hitValue)
+        }
     }
     
     @IBAction func touchUpResetButton(_ sender: UIButton){
